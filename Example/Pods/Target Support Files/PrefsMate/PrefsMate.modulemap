@@ -1,0 +1,6 @@
+framework module PrefsMate {
+  umbrella header "PrefsMate-umbrella.h"
+
+  export *
+  module * { export * }
+}

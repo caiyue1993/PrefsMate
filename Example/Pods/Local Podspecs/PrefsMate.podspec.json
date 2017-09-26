@@ -1,0 +1,22 @@
+{
+  "name": "PrefsMate",
+  "version": "0.1.0",
+  "summary": "A short description of PrefsMate.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/caiyue1993/PrefsMate",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "caiyue1993": "yuecai.nju@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/caiyue1993/PrefsMate.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "PrefsMate/Classes/**/*"
+}
