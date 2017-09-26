@@ -22,7 +22,6 @@ TODO: Add long description of the pod here.
                        DESC
 
   s.homepage         = 'https://github.com/caiyue1993/PrefsMate'
-  # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'caiyue1993' => 'yuecai.nju@gmail.com' }
   s.source           = { :git => 'https://github.com/caiyue1993/PrefsMate.git', :tag => s.version.to_s }
@@ -31,12 +30,6 @@ TODO: Add long description of the pod here.
   s.ios.deployment_target = '9.0'
   
   s.source_files = 'PrefsMate/Classes/**/*'
-  
-  # s.resource_bundles = {
-  #   'PrefsMate' => ['PrefsMate/Assets/*.png']
-  # }
+  s.frameworks = 'UIKit'
 
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
 end
