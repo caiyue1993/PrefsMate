@@ -12,7 +12,10 @@
 		472137CCC74A440F466E95F4A03B28B1 /* Pods-PrefsMate_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 60D844CB1B92ABE0EF5DE4827186B6AE /* Pods-PrefsMate_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		52166C422D0E54518B4ED890F975D6ED /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
 		5F63D907B9CB4D8B2D75BCD4B76564AE /* Pods-PrefsMate_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D1A0F30783B5DADE94C589191B9D1A13 /* Pods-PrefsMate_Example-dummy.m */; };
-		760D400003C82D8FEB59E9E1F8926987 /* ReplaceMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB7150BCCFFE1FAA84BC5A472059193 /* ReplaceMe.swift */; };
+		678E990C1F7A28DC0008837C /* PrefsMate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678E990B1F7A28DC0008837C /* PrefsMate.swift */; };
+		678E990F1F7A332C0008837C /* Pref.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678E990E1F7A332C0008837C /* Pref.swift */; };
+		678E99111F7A33330008837C /* SelectorMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678E99101F7A33330008837C /* SelectorMapper.swift */; };
+		678E99131F7A333A0008837C /* UITableViewCell+Switch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678E99121F7A33390008837C /* UITableViewCell+Switch.swift */; };
 		7E8EC5CAB7D5B5F14F7536A218D09BA5 /* Pods-PrefsMate_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E7E006661FFDA9470CD5F57F7498ED93 /* Pods-PrefsMate_Tests-dummy.m */; };
 		81191DADF1910369AF5F756F3019B9FC /* PrefsMate-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 95AA8430343E9E21E348BC29C20BE16C /* PrefsMate-dummy.m */; };
 		9C2CBC22D15FA2838D8C0501CEDB9FA2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
@@ -34,31 +37,34 @@
 		20F80855BADD33D382C15B759F80CC41 /* Pods-PrefsMate_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PrefsMate_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		25816636AEB9452FF72DBACBBD6284C7 /* Pods-PrefsMate_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-PrefsMate_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		35D668C05B59304A88FCF46C73D9D380 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3BB7150BCCFFE1FAA84BC5A472059193 /* ReplaceMe.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ReplaceMe.swift; path = PrefsMate/Classes/ReplaceMe.swift; sourceTree = "<group>"; };
 		3F1C38F6C3C2F3EE94904D5842085FA6 /* Pods-PrefsMate_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PrefsMate_Example.release.xcconfig"; sourceTree = "<group>"; };
-		50BCFB065C9D6B393552F5494490BDA9 /* PrefsMate.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = PrefsMate.modulemap; sourceTree = "<group>"; };
+		50BCFB065C9D6B393552F5494490BDA9 /* PrefsMate.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = PrefsMate.modulemap; sourceTree = "<group>"; };
 		5D8B69F8E4D1376F77F14DAD20EECEB6 /* Pods-PrefsMate_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PrefsMate_Tests-resources.sh"; sourceTree = "<group>"; };
 		60D844CB1B92ABE0EF5DE4827186B6AE /* Pods-PrefsMate_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-PrefsMate_Example-umbrella.h"; sourceTree = "<group>"; };
 		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		678E990B1F7A28DC0008837C /* PrefsMate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrefsMate.swift; sourceTree = "<group>"; };
+		678E990E1F7A332C0008837C /* Pref.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pref.swift; sourceTree = "<group>"; };
+		678E99101F7A33330008837C /* SelectorMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectorMapper.swift; sourceTree = "<group>"; };
+		678E99121F7A33390008837C /* UITableViewCell+Switch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Switch.swift"; sourceTree = "<group>"; };
 		72771A6B526F2A9D6529AF7BCD94127B /* PrefsMate.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = PrefsMate.xcconfig; sourceTree = "<group>"; };
-		83A083961B95F6D7C89AA78EF229D095 /* Pods_PrefsMate_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_PrefsMate_Tests.framework; path = "Pods-PrefsMate_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		83A083961B95F6D7C89AA78EF229D095 /* Pods_PrefsMate_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PrefsMate_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		89B6530C017069E625CA0912180AC072 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8A8B6C5AD96EAF40833A2B5E4DFE5453 /* Pods-PrefsMate_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PrefsMate_Tests-frameworks.sh"; sourceTree = "<group>"; };
-		8BACE966565E861DDC236F8190265F0E /* Pods-PrefsMate_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-PrefsMate_Example.modulemap"; sourceTree = "<group>"; };
+		8BACE966565E861DDC236F8190265F0E /* Pods-PrefsMate_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-PrefsMate_Example.modulemap"; sourceTree = "<group>"; };
 		91D682C386A0CEC223FD5CCD56283FCF /* Pods-PrefsMate_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PrefsMate_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		95AA8430343E9E21E348BC29C20BE16C /* PrefsMate-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "PrefsMate-dummy.m"; sourceTree = "<group>"; };
 		9C0020CFA652264BD6C2BFF02729F4F4 /* PrefsMate-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PrefsMate-umbrella.h"; sourceTree = "<group>"; };
 		B2D826480D394FAC2F8CEE0E29CC4ECC /* Pods-PrefsMate_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-PrefsMate_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		BBCE101DBD032A0195EF75EF9CFA1C54 /* Pods-PrefsMate_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PrefsMate_Example-frameworks.sh"; sourceTree = "<group>"; };
-		BDABC0542FC4148634B64C7D72540362 /* Pods_PrefsMate_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_PrefsMate_Example.framework; path = "Pods-PrefsMate_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BDABC0542FC4148634B64C7D72540362 /* Pods_PrefsMate_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PrefsMate_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C70C6F23ECAAED9D3352F502C33BCBCA /* Pods-PrefsMate_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-PrefsMate_Tests-umbrella.h"; sourceTree = "<group>"; };
 		C955FE747A09184961B1D1EF3581BDAF /* Pods-PrefsMate_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PrefsMate_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		D1A0F30783B5DADE94C589191B9D1A13 /* Pods-PrefsMate_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-PrefsMate_Example-dummy.m"; sourceTree = "<group>"; };
-		D31DF7578F6B409F6F9DD0477C9C3A41 /* Pods-PrefsMate_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-PrefsMate_Tests.modulemap"; sourceTree = "<group>"; };
+		D31DF7578F6B409F6F9DD0477C9C3A41 /* Pods-PrefsMate_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-PrefsMate_Tests.modulemap"; sourceTree = "<group>"; };
 		E1BD6A298096FFDC785839C4E1276D76 /* Pods-PrefsMate_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PrefsMate_Example-resources.sh"; sourceTree = "<group>"; };
 		E58543FA73BB77960963D27C7D1C0496 /* Pods-PrefsMate_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-PrefsMate_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		E6B4A4540AC59BFDD50F6CB02D95403E /* PrefsMate.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = PrefsMate.framework; path = PrefsMate.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E6B4A4540AC59BFDD50F6CB02D95403E /* PrefsMate.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PrefsMate.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E798F582C421120E3BF459D57E8915D4 /* PrefsMate-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PrefsMate-prefix.pch"; sourceTree = "<group>"; };
 		E7E006661FFDA9470CD5F57F7498ED93 /* Pods-PrefsMate_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-PrefsMate_Tests-dummy.m"; sourceTree = "<group>"; };
 		F8DCFB2F6CE6E3929AD26677F7AEF7D4 /* Pods-PrefsMate_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-PrefsMate_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
@@ -199,7 +205,10 @@
 		FF66E4772A47B4DDB35FAA8C2F9F034A /* PrefsMate */ = {
 			isa = PBXGroup;
 			children = (
-				3BB7150BCCFFE1FAA84BC5A472059193 /* ReplaceMe.swift */,
+				678E990E1F7A332C0008837C /* Pref.swift */,
+				678E990B1F7A28DC0008837C /* PrefsMate.swift */,
+				678E99101F7A33330008837C /* SelectorMapper.swift */,
+				678E99121F7A33390008837C /* UITableViewCell+Switch.swift */,
 				756017F5BD5E4F78F93D14F381DDB16C /* Support Files */,
 			);
 			name = PrefsMate;
@@ -296,6 +305,11 @@
 			attributes = {
 				LastSwiftUpdateCheck = 0830;
 				LastUpgradeCheck = 0700;
+				TargetAttributes = {
+					2C576778CD0751376A7B8D29AA4E7B42 = {
+						LastSwiftMigration = 0900;
+					};
+				};
 			};
 			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -337,8 +351,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				678E990F1F7A332C0008837C /* Pref.swift in Sources */,
+				678E99111F7A33330008837C /* SelectorMapper.swift in Sources */,
+				678E990C1F7A28DC0008837C /* PrefsMate.swift in Sources */,
 				81191DADF1910369AF5F756F3019B9FC /* PrefsMate-dummy.m in Sources */,
-				760D400003C82D8FEB59E9E1F8926987 /* ReplaceMe.swift in Sources */,
+				678E99131F7A333A0008837C /* UITableViewCell+Switch.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -433,6 +450,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 72771A6B526F2A9D6529AF7BCD94127B /* PrefsMate.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -512,6 +530,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 72771A6B526F2A9D6529AF7BCD94127B /* PrefsMate.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";

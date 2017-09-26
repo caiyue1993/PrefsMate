@@ -9,27 +9,31 @@
 import UIKit
 
 class HomeViewController: UIViewController {
-
+    
+    lazy var demoButton: UIButton = {
+        let b = UIButton()
+        b.setTitle("JUMP TO NEXT", for: .normal)
+        b.setTitleColor(UIColor.black, for: .normal)
+        b.addTarget(self, action: #selector(nav), for: .touchUpInside)
+        return b
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        
+        view.backgroundColor = .white
+        view.addSubview(demoButton)
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+        demoButton.center = view.center
+        demoButton.sizeToFit()
     }
-    */
+    
+    func nav(){
+        let vc = PrefsViewController(with: Bundle.main.url(forResource: "Prefs", withExtension: "plist")!)
+        navigationController?.pushViewController(vc, animated: true)
+    }
 
 }
