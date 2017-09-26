@@ -38,6 +38,12 @@ open class PrefsMate: NSObject {
         completionClosure()
     }
     
+    func writePList() {
+        let encoder = PropertyListEncoder()
+        let data = try! encoder.encode(prefs)
+        try! data.write(to: prefsPListLocation)
+    }
+    
 }
 
 extension PrefsMate: UITableViewDelegate {
@@ -64,8 +70,10 @@ extension PrefsMate: UITableViewDataSource {
         cell.textLabel?.text = pref.title
         cell.accessoryType = pref.hasDisclosure ? .disclosureIndicator : .none
         cell.hasSwitch = pref.hasSwitcher
-        cell.switchClosure = {
+        cell.switchClosure = { [weak self] in
             pref.hasSwitcher = $0
+            guard let `self` = self else { return }
+            `self`.writePList()
         }
         return cell
     }

@@ -24,7 +24,6 @@ class PrefsViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -44,7 +43,7 @@ class PrefsViewController: UIViewController {
 
 extension PrefsViewController {
     @objc func jumpToSetNewIcon() {
-        print("U r the best!")
+        
     }
 }
 
