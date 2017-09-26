@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<array>
+		<dict>
+			<key>title</key>
+			<string>目前完成数是否可以超过目标数</string>
+			<key>hasSwitcher</key>
+			<true/>
+			<key>hasDisclosure</key>
+			<false/>
+			<key>actionName</key>
+			<string>canExceed</string>
+		</dict>
+	</array>
+	<array>
+		<dict>
+			<key>hasDisclosure</key>
+			<true/>
+			<key>hasSwitcher</key>
+			<false/>
+			<key>title</key>
+			<string>更改应用图标</string>
+			<key>actionName</key>
+			<string>jumpToSetNewIcon</string>
+		</dict>
+	</array>
+</array>
+</plist>
