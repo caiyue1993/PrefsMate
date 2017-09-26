@@ -7,19 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		02FAE8AD541207507124A494D238AD9D /* PrefsMate-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = EA583FA04DB488961D49EA4FEFCBC401 /* PrefsMate-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		02FAE8AD541207507124A494D238AD9D /* PrefsMate-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A58E6D0446FC1590576439C74F352A2E /* PrefsMate-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		280782F132DA99E72C9AA443560088DA /* Pods-PrefsMate_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C70C6F23ECAAED9D3352F502C33BCBCA /* Pods-PrefsMate_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		472137CCC74A440F466E95F4A03B28B1 /* Pods-PrefsMate_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 60D844CB1B92ABE0EF5DE4827186B6AE /* Pods-PrefsMate_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		52166C422D0E54518B4ED890F975D6ED /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		52166C422D0E54518B4ED890F975D6ED /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */; };
 		5F63D907B9CB4D8B2D75BCD4B76564AE /* Pods-PrefsMate_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D1A0F30783B5DADE94C589191B9D1A13 /* Pods-PrefsMate_Example-dummy.m */; };
-		77ADDD6EDBCE4E93984E15AAF2F77CE9 /* UITableViewCell+Switch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923CAF40BD9CB902FE946F86D96D9C7F /* UITableViewCell+Switch.swift */; };
+		77ADDD6EDBCE4E93984E15AAF2F77CE9 /* UITableViewCell+Switch.swift in Sources */ = {isa = PBXBuildFile; fileRef = E88DC3FD554A95350B46A22248B322CF /* UITableViewCell+Switch.swift */; };
 		7E8EC5CAB7D5B5F14F7536A218D09BA5 /* Pods-PrefsMate_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E7E006661FFDA9470CD5F57F7498ED93 /* Pods-PrefsMate_Tests-dummy.m */; };
-		81EF39567185DB57A1B92435DE87198F /* PrefsMate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F3D9F0EFD1F1763C83CEBBC67F77738 /* PrefsMate.swift */; };
-		889B43AD6469834C0782452654697E0E /* PrefsMate-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 889763D748CF48DF8C0CE4F7ECB8AA4F /* PrefsMate-dummy.m */; };
-		9C2CBC22D15FA2838D8C0501CEDB9FA2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		B5F5933B9423E5CCFCAD994AC8820AF7 /* SelectorMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F9E179E24A0C0945049DA1DC01F4758 /* SelectorMapper.swift */; };
-		E96F1BAB148EEF9FDB0A0862CE4323C6 /* Pref.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5183CD91322DB5E07513803DD0AD776 /* Pref.swift */; };
-		FA21DBD24F92726B34B4556D49058DBA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		81EF39567185DB57A1B92435DE87198F /* PrefsMate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C2E606C3B24459A36572FEDF5CDAD01 /* PrefsMate.swift */; };
+		889B43AD6469834C0782452654697E0E /* PrefsMate-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 331956B698B10E7B0B11A13CD8EF442B /* PrefsMate-dummy.m */; };
+		9C2CBC22D15FA2838D8C0501CEDB9FA2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */; };
+		B5F5933B9423E5CCFCAD994AC8820AF7 /* SelectorMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2AA77076914B6F7069459C7E2D7F2A /* SelectorMapper.swift */; };
+		C035991FBF91C6997E33D43BBB09EE41 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B63C6A64CF66340668996F78DA6BB482 /* UIKit.framework */; };
+		D02B3FDC98C125BB757C908743825AE0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */; };
+		E96F1BAB148EEF9FDB0A0862CE4323C6 /* Pref.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26813FCAD49040BD9053CE2A907CDE73 /* Pref.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,40 +34,41 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0FF4045F7237AA1E176A51A39E33F35F /* PrefsMate.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = PrefsMate.modulemap; sourceTree = "<group>"; };
+		0C2E606C3B24459A36572FEDF5CDAD01 /* PrefsMate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PrefsMate.swift; path = PrefsMate/Classes/PrefsMate.swift; sourceTree = "<group>"; };
 		20F80855BADD33D382C15B759F80CC41 /* Pods-PrefsMate_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PrefsMate_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		25816636AEB9452FF72DBACBBD6284C7 /* Pods-PrefsMate_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-PrefsMate_Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		2F3D9F0EFD1F1763C83CEBBC67F77738 /* PrefsMate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PrefsMate.swift; path = PrefsMate/Classes/PrefsMate.swift; sourceTree = "<group>"; };
+		26813FCAD49040BD9053CE2A907CDE73 /* Pref.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Pref.swift; path = PrefsMate/Classes/Pref.swift; sourceTree = "<group>"; };
+		331956B698B10E7B0B11A13CD8EF442B /* PrefsMate-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "PrefsMate-dummy.m"; sourceTree = "<group>"; };
 		35D668C05B59304A88FCF46C73D9D380 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3F1C38F6C3C2F3EE94904D5842085FA6 /* Pods-PrefsMate_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PrefsMate_Example.release.xcconfig"; sourceTree = "<group>"; };
+		5D41A0CF5DD6E518D49309265C60EFD2 /* PrefsMate.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = PrefsMate.modulemap; sourceTree = "<group>"; };
 		5D8B69F8E4D1376F77F14DAD20EECEB6 /* Pods-PrefsMate_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PrefsMate_Tests-resources.sh"; sourceTree = "<group>"; };
 		60D844CB1B92ABE0EF5DE4827186B6AE /* Pods-PrefsMate_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-PrefsMate_Example-umbrella.h"; sourceTree = "<group>"; };
-		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		744807840C3279260B40E38074560D96 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7E2AA77076914B6F7069459C7E2D7F2A /* SelectorMapper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SelectorMapper.swift; path = PrefsMate/Classes/SelectorMapper.swift; sourceTree = "<group>"; };
 		83A083961B95F6D7C89AA78EF229D095 /* Pods_PrefsMate_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_PrefsMate_Tests.framework; path = "Pods-PrefsMate_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		869B614D533F393E475B13CEDADFBD72 /* PrefsMate-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PrefsMate-prefix.pch"; sourceTree = "<group>"; };
-		889763D748CF48DF8C0CE4F7ECB8AA4F /* PrefsMate-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "PrefsMate-dummy.m"; sourceTree = "<group>"; };
 		89B6530C017069E625CA0912180AC072 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8A8B6C5AD96EAF40833A2B5E4DFE5453 /* Pods-PrefsMate_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PrefsMate_Tests-frameworks.sh"; sourceTree = "<group>"; };
 		8BACE966565E861DDC236F8190265F0E /* Pods-PrefsMate_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-PrefsMate_Example.modulemap"; sourceTree = "<group>"; };
-		8F9E179E24A0C0945049DA1DC01F4758 /* SelectorMapper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SelectorMapper.swift; path = PrefsMate/Classes/SelectorMapper.swift; sourceTree = "<group>"; };
 		91D682C386A0CEC223FD5CCD56283FCF /* Pods-PrefsMate_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PrefsMate_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		923CAF40BD9CB902FE946F86D96D9C7F /* UITableViewCell+Switch.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UITableViewCell+Switch.swift"; path = "PrefsMate/Classes/UITableViewCell+Switch.swift"; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		94FDC4F2C19502DF3E4B9FCE97674BE5 /* PrefsMate.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = PrefsMate.xcconfig; sourceTree = "<group>"; };
+		A58E6D0446FC1590576439C74F352A2E /* PrefsMate-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PrefsMate-umbrella.h"; sourceTree = "<group>"; };
 		B2D826480D394FAC2F8CEE0E29CC4ECC /* Pods-PrefsMate_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-PrefsMate_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		B63C6A64CF66340668996F78DA6BB482 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		BBCE101DBD032A0195EF75EF9CFA1C54 /* Pods-PrefsMate_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PrefsMate_Example-frameworks.sh"; sourceTree = "<group>"; };
+		BC6BD1CD18D09BBECF183837268BC372 /* PrefsMate.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = PrefsMate.xcconfig; sourceTree = "<group>"; };
 		BDABC0542FC4148634B64C7D72540362 /* Pods_PrefsMate_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_PrefsMate_Example.framework; path = "Pods-PrefsMate_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C70C6F23ECAAED9D3352F502C33BCBCA /* Pods-PrefsMate_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-PrefsMate_Tests-umbrella.h"; sourceTree = "<group>"; };
 		C955FE747A09184961B1D1EF3581BDAF /* Pods-PrefsMate_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PrefsMate_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		D1A0F30783B5DADE94C589191B9D1A13 /* Pods-PrefsMate_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-PrefsMate_Example-dummy.m"; sourceTree = "<group>"; };
+		D2C692FDC0F86F4F1F433B7F5CD52BBD /* PrefsMate-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PrefsMate-prefix.pch"; sourceTree = "<group>"; };
 		D31DF7578F6B409F6F9DD0477C9C3A41 /* Pods-PrefsMate_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-PrefsMate_Tests.modulemap"; sourceTree = "<group>"; };
+		D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		E1BD6A298096FFDC785839C4E1276D76 /* Pods-PrefsMate_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PrefsMate_Example-resources.sh"; sourceTree = "<group>"; };
 		E58543FA73BB77960963D27C7D1C0496 /* Pods-PrefsMate_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-PrefsMate_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		E6B4A4540AC59BFDD50F6CB02D95403E /* PrefsMate.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = PrefsMate.framework; path = PrefsMate.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7E006661FFDA9470CD5F57F7498ED93 /* Pods-PrefsMate_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-PrefsMate_Tests-dummy.m"; sourceTree = "<group>"; };
-		EA583FA04DB488961D49EA4FEFCBC401 /* PrefsMate-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PrefsMate-umbrella.h"; sourceTree = "<group>"; };
-		F5183CD91322DB5E07513803DD0AD776 /* Pref.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Pref.swift; path = PrefsMate/Classes/Pref.swift; sourceTree = "<group>"; };
+		E88DC3FD554A95350B46A22248B322CF /* UITableViewCell+Switch.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UITableViewCell+Switch.swift"; path = "PrefsMate/Classes/UITableViewCell+Switch.swift"; sourceTree = "<group>"; };
+		F325961A15DE5A9FAB881D13CE13B6F7 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F8DCFB2F6CE6E3929AD26677F7AEF7D4 /* Pods-PrefsMate_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-PrefsMate_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -87,17 +89,31 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A99FCCB349AAE7F6033F4D5C757ED65F /* Frameworks */ = {
+		9FF380DC3284D3BE16916B52B9CF5A99 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA21DBD24F92726B34B4556D49058DBA /* Foundation.framework in Frameworks */,
+				D02B3FDC98C125BB757C908743825AE0 /* Foundation.framework in Frameworks */,
+				C035991FBF91C6997E33D43BBB09EE41 /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		239BDFAF52796172617A3D0E8EAD74AA /* PrefsMate */ = {
+			isa = PBXGroup;
+			children = (
+				26813FCAD49040BD9053CE2A907CDE73 /* Pref.swift */,
+				0C2E606C3B24459A36572FEDF5CDAD01 /* PrefsMate.swift */,
+				7E2AA77076914B6F7069459C7E2D7F2A /* SelectorMapper.swift */,
+				E88DC3FD554A95350B46A22248B322CF /* UITableViewCell+Switch.swift */,
+				66B11C6F7F6D54E840AFF8CD3811360F /* Support Files */,
+			);
+			name = PrefsMate;
+			path = PrefsMate;
+			sourceTree = "<group>";
+		};
 		2FACF474D674C86AD1B1357E359A36FA /* Pods-PrefsMate_Tests */ = {
 			isa = PBXGroup;
 			children = (
@@ -116,44 +132,54 @@
 			path = "Target Support Files/Pods-PrefsMate_Tests";
 			sourceTree = "<group>";
 		};
-		470415A864B536B6C5351D66BC303B60 /* PrefsMate */ = {
+		433CD3331B6C3787F473C941B61FC68F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				F5183CD91322DB5E07513803DD0AD776 /* Pref.swift */,
-				2F3D9F0EFD1F1763C83CEBBC67F77738 /* PrefsMate.swift */,
-				8F9E179E24A0C0945049DA1DC01F4758 /* SelectorMapper.swift */,
-				923CAF40BD9CB902FE946F86D96D9C7F /* UITableViewCell+Switch.swift */,
-				E143FCA54DBCA59331ADCDCE1ABB4451 /* Support Files */,
+				438B396F6B4147076630CAEFE34282C1 /* iOS */,
 			);
-			name = PrefsMate;
-			path = ../..;
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		438B396F6B4147076630CAEFE34282C1 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */,
+				B63C6A64CF66340668996F78DA6BB482 /* UIKit.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		4A07E26ECB4DDD5B4BC77992ECAE7AF0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				239BDFAF52796172617A3D0E8EAD74AA /* PrefsMate */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		66B11C6F7F6D54E840AFF8CD3811360F /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				F325961A15DE5A9FAB881D13CE13B6F7 /* Info.plist */,
+				5D41A0CF5DD6E518D49309265C60EFD2 /* PrefsMate.modulemap */,
+				BC6BD1CD18D09BBECF183837268BC372 /* PrefsMate.xcconfig */,
+				331956B698B10E7B0B11A13CD8EF442B /* PrefsMate-dummy.m */,
+				D2C692FDC0F86F4F1F433B7F5CD52BBD /* PrefsMate-prefix.pch */,
+				A58E6D0446FC1590576439C74F352A2E /* PrefsMate-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/PrefsMate";
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
-				FAB7DC8AB84C8F52DA746251E0A5DE7D /* Development Pods */,
-				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				433CD3331B6C3787F473C941B61FC68F /* Frameworks */,
+				4A07E26ECB4DDD5B4BC77992ECAE7AF0 /* Pods */,
 				F2F62C5C482311EBF3C5A79798F213E0 /* Products */,
 				F13A8598A9B600423F57EB15BC740C13 /* Targets Support Files */,
 			);
-			sourceTree = "<group>";
-		};
-		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				D35AF013A5F0BAD4F32504907A52519E /* iOS */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		D35AF013A5F0BAD4F32504907A52519E /* iOS */ = {
-			isa = PBXGroup;
-			children = (
-				6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */,
-			);
-			name = iOS;
 			sourceTree = "<group>";
 		};
 		D8073C5BC937FEE4CACBBFE50EA53232 /* Pods-PrefsMate_Example */ = {
@@ -174,20 +200,6 @@
 			path = "Target Support Files/Pods-PrefsMate_Example";
 			sourceTree = "<group>";
 		};
-		E143FCA54DBCA59331ADCDCE1ABB4451 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				744807840C3279260B40E38074560D96 /* Info.plist */,
-				0FF4045F7237AA1E176A51A39E33F35F /* PrefsMate.modulemap */,
-				94FDC4F2C19502DF3E4B9FCE97674BE5 /* PrefsMate.xcconfig */,
-				889763D748CF48DF8C0CE4F7ECB8AA4F /* PrefsMate-dummy.m */,
-				869B614D533F393E475B13CEDADFBD72 /* PrefsMate-prefix.pch */,
-				EA583FA04DB488961D49EA4FEFCBC401 /* PrefsMate-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/PrefsMate";
-			sourceTree = "<group>";
-		};
 		F13A8598A9B600423F57EB15BC740C13 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -205,14 +217,6 @@
 				E6B4A4540AC59BFDD50F6CB02D95403E /* PrefsMate.framework */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		FAB7DC8AB84C8F52DA746251E0A5DE7D /* Development Pods */ = {
-			isa = PBXGroup;
-			children = (
-				470415A864B536B6C5351D66BC303B60 /* PrefsMate */,
-			);
-			name = "Development Pods";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -267,7 +271,7 @@
 			buildConfigurationList = 40FCBDC2F9837DBB3C64854445A5AE5B /* Build configuration list for PBXNativeTarget "PrefsMate" */;
 			buildPhases = (
 				657731AC228B9C5CB5C84720EAB78624 /* Sources */,
-				A99FCCB349AAE7F6033F4D5C757ED65F /* Frameworks */,
+				9FF380DC3284D3BE16916B52B9CF5A99 /* Frameworks */,
 				2B106D342F0EF1793CB152B40C59ECC5 /* Headers */,
 			);
 			buildRules = (
@@ -528,7 +532,7 @@
 		};
 		B98D3469488DFF66B5AB0B2F1B52F132 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 94FDC4F2C19502DF3E4B9FCE97674BE5 /* PrefsMate.xcconfig */;
+			baseConfigurationReference = BC6BD1CD18D09BBECF183837268BC372 /* PrefsMate.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -645,7 +649,7 @@
 		};
 		E340CE5F9441C1804BB20C551B5DCB33 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 94FDC4F2C19502DF3E4B9FCE97674BE5 /* PrefsMate.xcconfig */;
+			baseConfigurationReference = BC6BD1CD18D09BBECF183837268BC372 /* PrefsMate.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
