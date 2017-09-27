@@ -30,7 +30,7 @@ class PrefsViewController: UIViewController {
         
         view.backgroundColor = .white
         view.addSubview(tableView)
-        Mate.parse(with: self, plistUrl: pListUrl) {
+        Mate.parseWithSource(self, plistUrl: pListUrl) {
             tableView.reloadData()
         }
     }

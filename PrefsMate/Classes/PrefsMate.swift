@@ -37,7 +37,7 @@ open class PrefsMate: NSObject {
     private var plistUrl: URL!
     
     /// A NSObject to store the outer object. Cuz it will perform selector outside, we need a property to hold the reference of them
-    private(set) var target: NSObject!
+    private(set) var source: NSObject!
     
     
     // MARK: - Singleton
@@ -62,14 +62,14 @@ open class PrefsMate: NSObject {
     
     /// Parse a plist file and ready to do some rendering in completion
     ///
-    /// - parameter target: the seletor that should be performed on. Usually if you are accustomed to write @objc func in the same
+    /// - parameter source: the seletor that should be performed on. Usually if you are accustomed to write @objc func in the same
     ///     view controller, pass `self`
     /// - parameter plistUrl: the url that the plist file locates
     /// - parameter completion: as the name indicates
-    open func parse(with target: NSObject,
-                    plistUrl: URL,
-                    completion: (() -> Void))  {
-        self.target = target
+    open func parseWithSource(_ source: NSObject,
+                              plistUrl: URL,
+                              completion: (() -> Void)) {
+        self.source = source
         self.plistUrl = plistUrl
         let decoder = PropertyListDecoder()
         let data = try! Data(contentsOf: plistUrl)
@@ -90,7 +90,7 @@ extension PrefsMate: UITableViewDelegate {
     
     public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let pref = prefs[indexPath.section][indexPath.row]
-        target.perform(ActionMapper.action(of: pref.actionName))
+        source.perform(ActionMapper.action(of: pref.actionName))
         tableView.deselectRow(at: indexPath, animated: true)
     }
     
