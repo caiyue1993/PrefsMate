@@ -27,6 +27,19 @@ extension UITableViewCell {
         }
     }
     
+    var switchStatus: Bool {
+        set {
+            if newValue {
+                if let av = (accessoryView as? UISwitch) {
+                    av.setOn(newValue, animated: false)
+                }
+            }
+        }
+        get {
+            return false
+        }
+    }
+    
     var switchClosure: ((Bool) -> Void)? {
         set {
             objc_setAssociatedObject(self, &AssociateKeys.switchClosureKey, newValue, .OBJC_ASSOCIATION_RETAIN)
