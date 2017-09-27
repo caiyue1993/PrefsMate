@@ -7,7 +7,6 @@ language: swift
 xcode_workspace: Example/PrefsMate.xcworkspace
 xcode_scheme: PrefsMate-Example
 podfile: Example/Podfile
-before_install:
-# - gem install cocoapods # Since Travis is not always on latest version
 script:
+- set -o pipefail && xcodebuild test -enableCodeCoverage YES -workspace Example/PrefsMate.xcworkspace -scheme PrefsMate-Example -sdk iphonesimulator9.3 ONLY_ACTIVE_ARCH=NO | xcpretty
 - xcodebuild -version
