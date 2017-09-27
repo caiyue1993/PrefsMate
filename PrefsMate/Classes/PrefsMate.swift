@@ -111,9 +111,10 @@ extension PrefsMate: UITableViewDataSource {
         let pref = prefs[indexPath.section][indexPath.row]
         cell.textLabel?.text = pref.title
         cell.accessoryType = pref.hasDisclosure ? .disclosureIndicator : .none
-        cell.hasSwitch = pref.hasSwitcher
+        cell.hasSwitch = pref.hasSwitch
+        cell.switchStatus = pref.switchStatus
         cell.switchClosure = { [weak self] in
-            pref.hasSwitcher = $0
+            pref.switchStatus = $0
             guard let `self` = self else { return }
             `self`.writePList()
         }

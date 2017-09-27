@@ -11,7 +11,8 @@ import Foundation
 class Pref: Codable {
     var title: String
     var actionName: String
-    var hasSwitcher: Bool
+    var hasSwitch: Bool
+    var switchStatus: Bool
     var hasDisclosure: Bool
 }
 
