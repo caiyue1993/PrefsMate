@@ -8,5 +8,5 @@ xcode_workspace: Example/PrefsMate.xcworkspace
 xcode_scheme: PrefsMate-Example
 podfile: Example/Podfile
 script:
-- set -o pipefail && xcodebuild test -enableCodeCoverage YES -workspace Example/PrefsMate.xcworkspace -scheme PrefsMate-Example -sdk iphonesimulator9.3 ONLY_ACTIVE_ARCH=NO | xcpretty
+- set -o pipefail && xcodebuild test -enableCodeCoverage YES -workspace Example/PrefsMate.xcworkspace -scheme PrefsMate-Example -sdk iphonesimulator11.0 ONLY_ACTIVE_ARCH=NO | xcpretty
 - xcodebuild -version
