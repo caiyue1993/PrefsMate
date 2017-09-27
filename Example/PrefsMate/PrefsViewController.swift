@@ -17,7 +17,7 @@ class PrefsViewController: UIViewController {
     init(with pListUrl: URL) {
         self.pListUrl = pListUrl
         super.init(nibName: nil, bundle: nil)
-        self.tableView = Mate.create(with: pListUrl, target: self),
+        self.tableView = Mate.create(with: pListUrl, target: self)
     }
     
     required init?(coder aDecoder: NSCoder) {
