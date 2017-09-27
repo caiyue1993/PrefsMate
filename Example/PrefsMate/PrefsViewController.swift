@@ -12,12 +12,13 @@ import PrefsMate
 class PrefsViewController: UIViewController {
     
     private let pListUrl: URL
-    private var tableView: PrefsTableView!
+    private lazy var tableView: PrefsTableView = {
+        return Mate.createPrefsTableView()
+    }()
     
     init(with pListUrl: URL) {
         self.pListUrl = pListUrl
         super.init(nibName: nil, bundle: nil)
-        self.tableView = Mate.create(with: pListUrl, target: self)
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -29,7 +30,7 @@ class PrefsViewController: UIViewController {
         
         view.backgroundColor = .white
         view.addSubview(tableView)
-        Mate.parse {
+        Mate.parse(with: self, plistUrl: pListUrl) {
             tableView.reloadData()
         }
     }
