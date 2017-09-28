@@ -4,6 +4,8 @@
 <array>
 	<array>
 		<dict>
+			<key>switchActionName</key>
+			<string>handleTheme</string>
 			<key>switchStatus</key>
 			<false/>
 			<key>title</key>
@@ -18,6 +20,8 @@
 	</array>
 	<array>
 		<dict>
+			<key>switchActionName</key>
+			<string>handleTheme</string>
 			<key>switchStatus</key>
 			<false/>
 			<key>hasDisclosure</key>
