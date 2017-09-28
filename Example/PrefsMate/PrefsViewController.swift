@@ -42,9 +42,17 @@ class PrefsViewController: UIViewController {
     
 }
 
-extension PrefsViewController {
-    @objc func jumpToSetNewIcon() {
-        
+extension PrefsViewController: PrefsSupportable {
+    var switchableItems: [String : SwitchableItemHandler]? {
+        return [
+            "handleTheme": { isOn in print(isOn)}
+        ]
+    }
+    
+    var selectableItems: [String : SelectableItemHandler]? {
+        return [
+            "jumpToSetNewIcon": { print("U r the best") }
+        ]
     }
 }
 
