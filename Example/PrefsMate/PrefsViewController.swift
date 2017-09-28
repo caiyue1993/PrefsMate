@@ -2,7 +2,7 @@
 //  ViewController.swift
 //  PrefsMate
 //
-//  Created by caiyue1993 on 09/26/2017.
+//  Created by 蔡越 on 09/26/2017.
 //  Copyright © 2017 Nanjing University. All rights reserved.
 //
 
@@ -30,8 +30,12 @@ class PrefsViewController: UIViewController {
         
         view.backgroundColor = .white
         view.addSubview(tableView)
-        Mate.parseWithSource(self, plistUrl: pListUrl) {
-            tableView.reloadData()
+        do {
+            try Mate.parseWithSource(self, plistUrl: pListUrl) {
+                tableView.reloadData()
+            }
+        } catch {
+            // Handle with error
         }
     }
     

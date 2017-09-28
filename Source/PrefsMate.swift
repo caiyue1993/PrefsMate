@@ -26,8 +26,9 @@ import Foundation
 
 public typealias PrefsTableView = UITableView
 
-/// 
-
+/// PrefsMate provides an elegant way to generate PrefsViewController(or may be SettingsViewController) in your app. All you
+/// need is a structured plist file. As for the other things, PrefsMate handles for you.
+/// For more reference, navigate to http://
 open class PrefsMate: NSObject {
     
     /// A nested array to store parsed prefs and to render table view
@@ -68,20 +69,40 @@ open class PrefsMate: NSObject {
     /// - parameter completion: as the name indicates
     open func parseWithSource(_ source: NSObject,
                               plistUrl: URL,
-                              completion: (() -> Void)) {
+                              completion: (() -> Void)) throws {
         self.source = source
         self.plistUrl = plistUrl
+        
+        let data = try Data(contentsOf: plistUrl)
         let decoder = PropertyListDecoder()
-        let data = try! Data(contentsOf: plistUrl)
-        prefs = try! decoder.decode([[Pref]].self, from: data)
+        do {
+            prefs = try decoder.decode([[Pref]].self, from: data)
+        } catch DecodingError.keyNotFound(let key, let context) {
+            print("Missing key: \(key)")
+            print("Debug description: \(context.debugDescription)")
+        } catch DecodingError.valueNotFound(let type, let context) {
+            print("Missing value for type: \(type)")
+            print("Debug description: \(context.debugDescription)")
+        } catch DecodingError.typeMismatch(let type, let context) {
+            print("Type mismatch for type: \(type)")
+            print("Debug description: \(context.debugDescription)")
+        } catch {
+            print(error.localizedDescription)
+        }
         completion()
     }
     
-    
-    func writePList() {
+    private func writePList() throws {
         let encoder = PropertyListEncoder()
-        let data = try! encoder.encode(prefs)
-        try! data.write(to: plistUrl)
+        do {
+            let data = try encoder.encode(prefs)
+            try data.write(to: plistUrl)
+        } catch EncodingError.invalidValue(let value, let context) {
+            print("Invalid value: \(value)")
+            print("Debug description: \(context.debugDescription)")
+        } catch {
+            print(error.localizedDescription)
+        }
     }
     
 }
@@ -89,8 +110,18 @@ open class PrefsMate: NSObject {
 extension PrefsMate: UITableViewDelegate {
     
     public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let source = source as? PrefsSupportable else {
+            fatalError("You have to implement PrefsSupportable protocol")
+        }
+        
         let pref = prefs[indexPath.section][indexPath.row]
-        source.perform(ActionMapper.action(of: pref.actionName))
+        
+        if let selectableItems = source.selectableItems, let selectAction = selectableItems[pref.actionName] {
+            selectAction()
+        } else {
+            print("Go and check it, you may mistype the actionName \(pref.actionName)")
+        }
+        
         tableView.deselectRow(at: indexPath, animated: true)
     }
     
@@ -107,17 +138,28 @@ extension PrefsMate: UITableViewDataSource {
     }
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let source = source as? PrefsSupportable else {
+            fatalError("You have to implement PrefsSupportable protocol")
+        }
+        
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         let pref = prefs[indexPath.section][indexPath.row]
         cell.textLabel?.text = pref.title
         cell.accessoryType = pref.hasDisclosure ? .disclosureIndicator : .none
         cell.hasSwitch = pref.hasSwitch
         cell.switchStatus = pref.switchStatus
-        cell.switchClosure = { [weak self] in
-            pref.switchStatus = $0
+        
+        cell.switchClosure = { [weak self] isOn in
+            if let switchableItems = source.switchableItems, let switchAction = switchableItems[pref.switchActionName] {
+                switchAction(isOn)
+            } else {
+                print("You may mismatch the switchActionName \(pref.switchActionName) in plist file and PrefsSupportable implementation, go and check it" )
+            }
+            pref.switchStatus = isOn
             guard let `self` = self else { return }
-            `self`.writePList()
+            try? `self`.writePList()
         }
+        
         return cell
     }
     

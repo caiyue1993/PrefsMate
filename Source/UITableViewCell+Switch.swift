@@ -52,6 +52,8 @@ extension UITableViewCell {
     @objc func switchAction(_ sender: UISwitch) {
         if let closure = switchClosure {
             closure(sender.isOn)
+        } else {
+            fatalError("Switch closure undefined.")
         }
     }
 }
