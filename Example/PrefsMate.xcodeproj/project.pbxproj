@@ -12,7 +12,6 @@
 		607FACD81AFB9204008FA782 /* PrefsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* PrefsViewController.swift */; };
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
-		678E99151F7A35A00008837C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678E99141F7A35A00008837C /* HomeViewController.swift */; };
 		678E99161F7A36420008837C /* Prefs.plist in Resources */ = {isa = PBXBuildFile; fileRef = 678E990D1F7A329C0008837C /* Prefs.plist */; };
 		E1E47DC80B3B940E83A6413F /* Pods_PrefsMate_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1B69BE5DD024DE996DD569F /* Pods_PrefsMate_Example.framework */; };
 /* End PBXBuildFile section */
@@ -39,7 +38,6 @@
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		678E990D1F7A329C0008837C /* Prefs.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Prefs.plist; sourceTree = "<group>"; };
-		678E99141F7A35A00008837C /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		7599586AF533BC1B8FE7F1AF /* Pods-PrefsMate_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PrefsMate_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-PrefsMate_Example/Pods-PrefsMate_Example.release.xcconfig"; sourceTree = "<group>"; };
 		95F35D04A7209424C1FD5BD8 /* Pods-PrefsMate_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PrefsMate_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PrefsMate_Example/Pods-PrefsMate_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		A1B69BE5DD024DE996DD569F /* Pods_PrefsMate_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PrefsMate_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -94,7 +92,6 @@
 			isa = PBXGroup;
 			children = (
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
-				678E99141F7A35A00008837C /* HomeViewController.swift */,
 				607FACD71AFB9204008FA782 /* PrefsViewController.swift */,
 				678E990D1F7A329C0008837C /* Prefs.plist */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
@@ -371,7 +368,6 @@
 			files = (
 				607FACD81AFB9204008FA782 /* PrefsViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
-				678E99151F7A35A00008837C /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
