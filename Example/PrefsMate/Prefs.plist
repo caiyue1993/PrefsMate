@@ -8,22 +8,6 @@
 			<string>handleTheme</string>
 			<key>switchStatus</key>
 			<false/>
-			<key>title</key>
-			<string>目前完成数是否可以超过目标数</string>
-			<key>hasSwitch</key>
-			<true/>
-			<key>hasDisclosure</key>
-			<false/>
-			<key>actionName</key>
-			<string>canExceed</string>
-		</dict>
-	</array>
-	<array>
-		<dict>
-			<key>switchActionName</key>
-			<string>handleTheme</string>
-			<key>switchStatus</key>
-			<false/>
 			<key>hasDisclosure</key>
 			<true/>
 			<key>hasSwitch</key>
@@ -32,6 +16,52 @@
 			<string>更改应用图标</string>
 			<key>actionName</key>
 			<string>jumpToSetNewIcon</string>
+		</dict>
+	</array>
+	<array>
+		<dict>
+			<key>switchActionName</key>
+			<string></string>
+			<key>switchStatus</key>
+			<false/>
+			<key>title</key>
+			<string>邮件反馈</string>
+			<key>hasSwitch</key>
+			<true/>
+			<key>hasDisclosure</key>
+			<false/>
+			<key>actionName</key>
+			<string>feedback</string>
+		</dict>
+		<dict>
+			<key>switchActionName</key>
+			<string></string>
+			<key>switchStatus</key>
+			<false/>
+			<key>title</key>
+			<string>微博</string>
+			<key>hasSwitch</key>
+			<false/>
+			<key>hasDisclosure</key>
+			<true/>
+			<key>actionName</key>
+			<string>weibo</string>
+		</dict>
+	</array>
+	<array>
+		<dict>
+			<key>switchActionName</key>
+			<string></string>
+			<key>switchStatus</key>
+			<false/>
+			<key>hasDisclosure</key>
+			<true/>
+			<key>hasSwitch</key>
+			<false/>
+			<key>title</key>
+			<string>致谢</string>
+			<key>actionName</key>
+			<string>jumpToThank</string>
 		</dict>
 	</array>
 </array>
