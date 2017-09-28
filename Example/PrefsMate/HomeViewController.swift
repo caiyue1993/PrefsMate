@@ -3,7 +3,7 @@
 //  PrefsMate_Example
 //
 //  Created by 蔡越 on 26/09/2017.
-//  Copyright © 2017 CocoaPods. All rights reserved.
+//  Copyright © 2017 Nanjing University. All rights reserved.
 //
 
 import UIKit
