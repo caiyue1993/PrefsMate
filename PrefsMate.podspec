@@ -8,19 +8,8 @@
 
 Pod::Spec.new do |s|
   s.name             = 'PrefsMate'
-  s.version          = '0.1.0'
-  s.summary          = 'A short description of PrefsMate.'
-
-# This description is used to generate tags and improve search results.
-#   * Think: What does it do? Why did you write it? What is the focus?
-#   * Try to keep it short, snappy and to the point.
-#   * Write the description between the DESC delimiters below.
-#   * Finally, don't worry about the indent, CocoaPods strips it!
-
-  s.description      = <<-DESC
-TODO: Add long description of the pod here.
-                       DESC
-
+  s.version          = '0.2.0'
+  s.summary          = 'Elegant UITableView generator in Swift, usually suitable for prefs/settings interface.'
   s.homepage         = 'https://github.com/caiyue1993/PrefsMate'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'caiyue1993' => 'yuecai.nju@gmail.com' }
