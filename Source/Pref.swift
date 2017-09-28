@@ -9,11 +9,12 @@
 import Foundation
 
 class Pref: Codable {
-    var title: String
-    var actionName: String
-    var hasSwitch: Bool
+    let title: String
+    let actionName: String
+    let hasSwitch: Bool
     var switchStatus: Bool
-    var hasDisclosure: Bool
+    let switchActionName: String
+    let hasDisclosure: Bool
 }
 
 
