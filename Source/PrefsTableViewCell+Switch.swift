@@ -13,7 +13,7 @@ struct AssociateKeys {
     static var switchClosureKey = 0
 }
 
-extension UITableViewCell {
+extension PrefsTableViewCell {
     var hasSwitch: Bool {
         set {
             if newValue {
