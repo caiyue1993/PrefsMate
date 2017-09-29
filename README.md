@@ -5,7 +5,7 @@
 [![License](https://img.shields.io/cocoapods/l/PrefsMate.svg?style=flat)](http://cocoapods.org/pods/PrefsMate)
 [![Platform](https://img.shields.io/cocoapods/p/PrefsMate.svg?style=flat)](http://cocoapods.org/pods/PrefsMate)
 
-PrefsMate provide an elegant way to generate UITableView using one property list file(plist file, in short). Also, a good care is taken of(you can handle action). Thanks to the Codable in Swift 4, it makes the code perfect clean.
+PrefsMate provide an elegant way to generate UITableView using one property list file(plist file, in short). Also, a good care is taken of(you can handle action). Thanks to the Codable protocol in Swift 4, it makes the code perfect clean.
 
 ## Background
 
@@ -27,7 +27,7 @@ Taking example of the image above, the formatted plist file looks like this:
 
 (Don't be afraid of this long file. In fact you just need to do some clickable things.) 
 
-## 2. Create the table view and arrange parsing job
+## 2. Create the table view and arrange parsing work
 ```swift
 private lazy var tableView: PrefsTableView = {
         return Mate.createPrefsTableView()
@@ -85,9 +85,11 @@ Enjoy yourself.
 
 ## Suggestions
 
-- Being familiar with plist file well help you a lot. Sometimes you can directly edit the plist file through "Open As Source Code". 
+- Being familiar with plist file will help you a lot. Sometimes you can directly edit the plist file through "Open As Source Code". 
 
-- Explore the source code! 
+- Explore the source code!
+
+- If you have an issue, please don't hesitate. Just let me know.:)
 
 ## Example
 
