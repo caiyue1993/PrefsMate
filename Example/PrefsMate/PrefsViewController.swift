@@ -47,15 +47,34 @@ class PrefsViewController: UIViewController {
 }
 
 extension PrefsViewController: PrefsSupportable {
-    var switchableItems: [String : SwitchableItemHandler]? {
+    var switchableItems: [SwitchActionName : SwitchableItemHandler]? {
         return [
-            "handleTheme": { isOn in print(isOn)}
+            "handleThemeMode": { isOn in
+                print("Dark theme mode is \(isOn)")
+            }
         ]
     }
     
-    var selectableItems: [String : SelectableItemHandler]? {
+    var selectableItems: [SelectActionName : SelectableItemHandler]? {
         return [
-            "jumpToSetNewIcon": { print("U r the best") }
+            "changeIcon": {
+                print("Go to icon change view controller")
+            },
+            "mailAction": {
+                print("Replace with mail action")
+            },
+            "twitterAction": {
+                print("Replace with twitter action")
+            },
+            "weiboAction": {
+                print("Replace with weibo action")
+            },
+            "rankAction": {
+                print("Replace with rank action")
+            },
+            "thankAction": {
+                print("Replace with thank action")
+            }
         ]
     }
 }
