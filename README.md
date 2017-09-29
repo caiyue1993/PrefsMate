@@ -19,20 +19,22 @@ And here you go! You have come to the right place :).
 
 ## Preparation 
 
-1. A plist file containing formatted data 
+## 1. Prepare a plist file containing formatted data 
 
 Taking example of the image above, the formatted plist file looks like this:
 
 ![plist structure](https://i.loli.net/2017/09/29/59cdb7a32ed93.png)
 
-2. Create the table view and do parsing job
+(Don't be afraid of this long file. In fact you just need to do some clickable things.) 
+
+## 2. Create the table view and arrange parsing job
 ```swift
 private lazy var tableView: PrefsTableView = {
         return Mate.createPrefsTableView()
 }()
 ```
 
-You can do parsing job in viewDidLoad():
+You can add the parsing code in viewDidLoad():
 ```swift
  do {
       try Mate.parseWithSource(self, plistUrl: pListUrl) {
@@ -43,7 +45,7 @@ You can do parsing job in viewDidLoad():
     }
 ```
 
-3. Make your view controller conform to PrefsSupportable protocol
+## 3. Make your view controller conform to PrefsSupportable protocol
 
 Cuz we have the need to customize select actions and switch actions, PrefsSupportable protocol is provided. 
 
@@ -69,13 +71,13 @@ var switchableItems: [SwitchActionName : SwitchableItemHandler]? {
 }
 ```
 
-Then we are done. PrefsMate will do the right things.
+Then we are done. PrefsMate will do the right things for you.
 
-Be cautious, the "handleThemeMode" String must be the same value of `switchActionName` in the plist file.
+> Be cautious, the "handleThemeMode" String must be the same value of `switchActionName` in the plist file. Same on `selectActionName`.
 
-Same, you can also configure `selectableItems` on behalf of select actions. You could see [Example project] for reference.
+You could refer to [Example project](https://github.com/caiyue1993/PrefsMate/tree/master/Example) for more detail.
 
-4. Enjoy
+## 4. Enjoy 
 
 Once following the rules above, you are all set! We handle the data persistence for you.:)
 
