@@ -32,7 +32,7 @@ public typealias PrefsTableView = UITableView
 open class PrefsMate: NSObject {
     
     /// A nested array to store parsed prefs and to render table view
-    private(set) var prefs: [[Pref]] = [[]]
+    private(set) var prefs: [SectionOfPrefs] = []
     
     /// A url to store plist file location
     private var plistUrl: URL!
@@ -57,7 +57,7 @@ open class PrefsMate: NSObject {
         tv.delegate = self
         tv.dataSource = self
         tv.tableFooterView = UIView(frame: .zero)
-        tv.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        tv.register(PrefsTableViewCell.self, forCellReuseIdentifier: "cell")
         return tv
     }
     
@@ -76,7 +76,7 @@ open class PrefsMate: NSObject {
         let data = try Data(contentsOf: plistUrl)
         let decoder = PropertyListDecoder()
         do {
-            prefs = try decoder.decode([[Pref]].self, from: data)
+            prefs = try decoder.decode([SectionOfPrefs].self, from: data)
         } catch DecodingError.keyNotFound(let key, let context) {
             print("Missing key: \(key)")
             print("Debug description: \(context.debugDescription)")
@@ -114,12 +114,12 @@ extension PrefsMate: UITableViewDelegate {
             fatalError("You have to implement PrefsSupportable protocol")
         }
         
-        let pref = prefs[indexPath.section][indexPath.row]
+        let pref = prefs[indexPath.section].prefs[indexPath.row]
         
-        if let selectableItems = source.selectableItems, let selectAction = selectableItems[pref.actionName] {
+        if let selectableItems = source.selectableItems, let selectAction = selectableItems[pref.selectActionName] {
             selectAction()
         } else {
-            print("Go and check it, you may mistype the actionName \(pref.actionName)")
+            print("Go and check it, you may mistype the selectActionName \(pref.selectActionName)")
         }
         
         tableView.deselectRow(at: indexPath, animated: true)
@@ -134,7 +134,7 @@ extension PrefsMate: UITableViewDataSource {
     }
     
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return prefs[section].count
+        return prefs[section].prefs.count
     }
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -142,18 +142,18 @@ extension PrefsMate: UITableViewDataSource {
             fatalError("You have to implement PrefsSupportable protocol")
         }
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        let pref = prefs[indexPath.section][indexPath.row]
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! PrefsTableViewCell
+        let pref = prefs[indexPath.section].prefs[indexPath.row]
         cell.textLabel?.text = pref.title
+        cell.detailTextLabel?.text = pref.detailText
         cell.accessoryType = pref.hasDisclosure ? .disclosureIndicator : .none
         cell.hasSwitch = pref.hasSwitch
         cell.switchStatus = pref.switchStatus
-        
         cell.switchClosure = { [weak self] isOn in
             if let switchableItems = source.switchableItems, let switchAction = switchableItems[pref.switchActionName] {
                 switchAction(isOn)
             } else {
-                print("You may mismatch the switchActionName \(pref.switchActionName) in plist file and PrefsSupportable implementation, go and check it" )
+                print("You may mismatch the switchActionName \"\(pref.switchActionName)\" in plist file and PrefsSupportable implementation, go and check it" )
             }
             pref.switchStatus = isOn
             guard let `self` = self else { return }
@@ -161,6 +161,14 @@ extension PrefsMate: UITableViewDataSource {
         }
         
         return cell
+    }
+    
+    public func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return prefs[section].header
+    }
+    
+    public func tableView(_ tableView: UITableView, titleForFooterInSection section: Int) -> String? {
+        return prefs[section].footer
     }
     
 }

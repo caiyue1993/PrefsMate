@@ -10,11 +10,16 @@ import Foundation
 
 class Pref: Codable {
     let title: String
-    let actionName: String
+    let selectActionName: String
     let hasSwitch: Bool
     var switchStatus: Bool
     let switchActionName: String
     let hasDisclosure: Bool
+    let detailText: String
 }
 
-
+class SectionOfPrefs: Codable {
+    var prefs: [Pref]
+    let header: String
+    let footer: String
+}
