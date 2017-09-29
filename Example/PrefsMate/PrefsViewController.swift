@@ -61,19 +61,19 @@ extension PrefsViewController: PrefsSupportable {
                 print("Go to icon change view controller")
             },
             "mailAction": {
-                print("Replace with mail action")
+                print("Handle with mail action")
             },
             "twitterAction": {
-                print("Replace with twitter action")
+                print("Handle with twitter action")
             },
             "weiboAction": {
-                print("Replace with weibo action")
+                print("Handle with weibo action")
             },
             "rankAction": {
-                print("Replace with rank action")
+                print("Handle with rank action")
             },
             "thankAction": {
-                print("Replace with thank action")
+                print("Handle with thank action")
             }
         ]
     }
