@@ -5,7 +5,7 @@
 [![License](https://img.shields.io/cocoapods/l/PrefsMate.svg?style=flat)](http://cocoapods.org/pods/PrefsMate)
 [![Platform](https://img.shields.io/cocoapods/p/PrefsMate.svg?style=flat)](http://cocoapods.org/pods/PrefsMate)
 
-PrefsMate provide an elegant way to generate UITableView using one property list file(plist file, in short). Also, a good care is taken of(you can handle action). Thanks to the Codable protocol in Swift 4, it makes the code perfect clean.
+PrefsMate provide an elegant way to generate UITableView using a property list file(plist file, in short). Also, you can configure actions. Thanks to the **Codable** protocol in Swift 4, it makes the code perfect clean.
 
 ## Background
 
@@ -13,9 +13,9 @@ In our app, we usually need a UITableView in PrefsViewController(or perhaps name
 
 ![PrefsViewController](https://i.loli.net/2017/09/29/59cdab5adb4f4.png)
 
-When implementing this kind of stuff, your inner voice must be saying: "Writing this UI is fxxking tedious! Is there any help that I can find?" 
+When implementing this kind of stuff, your inner voice must be saying: "Writing this UI is fxxking tedious! Is there any help that I can ask for?" 
 
-And here you go! You have come to the right place :).  
+And congrats! You have come to the right place :).  
 
 ## Preparation 
 
@@ -27,7 +27,7 @@ Taking example of the image above, the formatted plist file looks like this:
 
 (Don't be afraid of this long file. In fact you just need to do some clickable things.) 
 
-## 2. Create the table view and arrange parsing work
+## 2. Create the table view and do the parsing job
 ```swift
 private lazy var tableView: PrefsTableView = {
         return Mate.createPrefsTableView()
@@ -71,7 +71,7 @@ var switchableItems: [SwitchActionName : SwitchableItemHandler]? {
 }
 ```
 
-Then we are done. PrefsMate will do the right things for you.
+Then we are done! PrefsMate will do right things.
 
 > Be cautious, the "handleThemeMode" String must be the same value of `switchActionName` in the plist file. Same on `selectActionName`.
 
@@ -89,11 +89,13 @@ Enjoy yourself.
 
 - Explore the source code!
 
-- If you have an issue, please don't hesitate. Just let me know.:)
+- If you have an issue, please don't hesitate. Just let me know :)
 
 ## Example
 
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
+To run the example project, clone the repo, and run `pod install` from the Example directory.
+
+(Cuz this is a new Pod, you may need to `pod update` first.)
 
 ## Requirements
 
