@@ -29,9 +29,7 @@ Taking example of the image above, the formatted plist file looks like this:
 
 ## 2. Create the table view and do the parsing job
 ```swift
-private lazy var tableView: PrefsTableView = {
-        return Mate.createPrefsTableView()
-}()
+let tableView = Mate.createPrefsTableView()
 ```
 
 You can add the parsing code in viewDidLoad():
