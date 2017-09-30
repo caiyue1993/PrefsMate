@@ -13,7 +13,7 @@ In our app, we usually need a UITableView in PrefsViewController(or perhaps name
 
 ![PrefsViewController](https://i.loli.net/2017/09/29/59cdab5adb4f4.png)
 
-When implementing this kind of stuff, your inner voice must be saying: "Writing this UI is fxxking tedious! Is there any help that I can ask for?" 
+When implementing this kind of stuff, your inner voice must be this: "Writing this UI is fxxking tedious! Is there any help that I can ask for?" 
 
 And congrats! You have come to the right place :).  
 
@@ -43,9 +43,9 @@ You can add the parsing code in viewDidLoad():
     }
 ```
 
-## 3. Make your view controller conform to PrefsSupportable protocol
+## 3. If needed，make your view controller conform to PrefsSupportable protocol
 
-Cuz we have the need to customize select actions and switch actions, PrefsSupportable protocol is provided. 
+If you have select and switch action to handle, PrefsSupportable protocol already considered for you. 
 
 ```swift
 public protocol PrefsSupportable {
@@ -71,7 +71,7 @@ var switchableItems: [SwitchActionName : SwitchableItemHandler]? {
 
 Then we are done! PrefsMate will do right things.
 
-> Be cautious, the "handleThemeMode" String must be the same value of `switchActionName` in the plist file. Same on `selectActionName`.
+> Keep in mind: the "handleThemeMode" String must be the same value of `switchActionName` in the plist file. Same on `selectActionName`.
 
 You could refer to [Example project](https://github.com/caiyue1993/PrefsMate/tree/master/Example) for more detail.
 
