@@ -5,7 +5,7 @@
 [![License](https://img.shields.io/cocoapods/l/PrefsMate.svg?style=flat)](http://cocoapods.org/pods/PrefsMate)
 [![Platform](https://img.shields.io/cocoapods/p/PrefsMate.svg?style=flat)](http://cocoapods.org/pods/PrefsMate)
 
-PrefsMate provide an elegant way to generate UITableView using a property list file(plist file, in short). Also, you can configure actions. Thanks to the **Codable** protocol in Swift 4, it makes the code perfect clean.
+PrefsMate provide an elegant way to generate UITableView using a property list file(plist file, in short). Also, you can configure actions with its support. Thanks to the **Codable** protocol in Swift 4, it makes the code perfect clean.
 
 ## Background
 
@@ -17,7 +17,7 @@ When implementing this kind of stuff, your inner voice must be this: "Writing th
 
 And congrats! You have come to the right place :).  
 
-## Preparation 
+## Usage
 
 ## 1. Prepare a plist file containing formatted data 
 
@@ -25,7 +25,7 @@ Taking example of the image above, the formatted plist file looks like this:
 
 ![plist structure](https://i.loli.net/2017/09/29/59cdb7a32ed93.png)
 
-(Don't be afraid of this long file. In fact you just need to do some clickable things.) 
+> Don't be afraid of this long file. In fact you just need to do some clickable things. You could even copy and paste [our plist source code](https://github.com/caiyue1993/PrefsMate/blob/master/Example/PrefsMate/Prefs.plist) first just for your convenience.
 
 ## 2. Create the table view and do the parsing job
 ```swift
@@ -43,7 +43,7 @@ You can add the parsing code in viewDidLoad():
     }
 ```
 
-## 3. If needed，make your view controller conform to PrefsSupportable protocol
+## 3. If needed, let your view controller conform to PrefsSupportable protocol
 
 If you have select and switch action to handle, PrefsSupportable protocol already considered for you. 
 
@@ -67,25 +67,28 @@ var switchableItems: [SwitchActionName : SwitchableItemHandler]? {
             }
         ]
 }
+var selectableItems: [SelectActionName : SelectableItemHandler]? {
+        return [
+            “changeIcon”: { 
+                print(“Handle change icon action here”)
+            }
+           ...
+           ...
+        ]
+}
 ```
 
-Then we are done! PrefsMate will do right things.
+Then we are done! PrefsMate will do right things for you.
 
 > Keep in mind: the "handleThemeMode" String must be the same value of `switchActionName` in the plist file. Same on `selectActionName`.
 
+> In switch actions, PrefsMate already take care of the **data persistence**. So you don’t need to store the user preferences yourself.
+
 You could refer to [Example project](https://github.com/caiyue1993/PrefsMate/tree/master/Example) for more detail.
-
-## 4. Enjoy 
-
-Once following the rules above, you are all set! We handle the data persistence for you.:)
-
-Enjoy yourself. 
 
 ## Suggestions
 
-- Being familiar with plist file will help you a lot. Sometimes you can directly edit the plist file through "Open As Source Code". 
-
-- Explore the source code!
+- Being familiar with plist file structure will help you a lot. Sometimes you can directly edit the plist file through "Open As Source Code". 
 
 - If you have an issue, please don't hesitate. Just let me know :)
 
