@@ -8,8 +8,8 @@
 
 Pod::Spec.new do |s|
   s.name             = 'PrefsMate'
-  s.version          = '0.3.1'
-  s.summary          = 'Perfect mate for UITableView, usually suitable for prefs/settings interface.'
+  s.version          = '0.3.2'
+  s.summary          = '🐣 Elegant UITableView generator for Swift.'
   s.homepage         = 'https://github.com/caiyue1993/PrefsMate'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'caiyue1993' => 'yuecai.nju@gmail.com' }
