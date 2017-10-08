@@ -1,5 +1,5 @@
 //
-//  FileHelper.swift
+//  TransferHelper.swift
 //  PrefsMate
 //
 //  Created by 蔡越 on 07/10/2017.
@@ -24,11 +24,11 @@ import UIKit
 /// 3. when the plist file in the bundle is updated, it should trigger the update of
 /// "source/" and the file in the Document directory.
 
-class FileHelper {
+class TransferHelper {
     
     // MARK: - Singleton
     
-    public static let `default` = FileHelper()
+    public static let `default` = TransferHelper()
     private let fileManager = FileManager.default
     
     private lazy var sourceDir: URL = {
@@ -65,7 +65,7 @@ class FileHelper {
         let destinationUrl = documentDir.appendingPathComponent(originUrl.lastPathComponent)
         
         do {
-            try FileHelper.default.storeOriginFile(from: originUrl)
+            try TransferHelper.default.storeOriginFile(from: originUrl)
         } catch {
             print(error.localizedDescription)
         }

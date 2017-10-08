@@ -73,7 +73,7 @@ open class PrefsMate: NSObject {
         self.source = source
         self.plistUrl = plistUrl
         
-        let data = try FileHelper.default.transferFile(from: plistUrl)
+        let data = try TransferHelper.default.transferFile(from: plistUrl)
         let decoder = PropertyListDecoder()
         do {
             prefs = try decoder.decode([SectionOfPrefs].self, from: data)
@@ -89,6 +89,7 @@ open class PrefsMate: NSObject {
         } catch {
             print(error.localizedDescription)
         }
+        
         completion()
     }
     
@@ -96,7 +97,7 @@ open class PrefsMate: NSObject {
         let encoder = PropertyListEncoder()
         do {
             let data = try encoder.encode(prefs)
-            let documentDir = FileHelper.default.documentDir
+            let documentDir = TransferHelper.default.documentDir
             try data.write(to: documentDir.appendingPathComponent(self.plistUrl.lastPathComponent))
         } catch EncodingError.invalidValue(let value, let context) {
             print("Invalid value: \(value)")
