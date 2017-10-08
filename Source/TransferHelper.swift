@@ -42,13 +42,14 @@ class TransferHelper {
     
     // MARK: - Functions that related to file transfer
     
-    /// The plist file in the "source/" subdirectory always keep the same to the current
-    /// plist file in the bundle.
+    /// The plist file in the "source/" subdirectory should always keep the same to the current
+    /// plist file in the bundle. The plist file in the Document directory also need to sync
+    /// when the plist file in the bundle is updated.
     private func storeOriginFile(from originUrl: URL) throws {
         if !fileManager.fileExists(atPath: sourceDir.path) {
             try fileManager.createDirectory(atPath: sourceDir.path, withIntermediateDirectories: false, attributes: nil)
         }
-       
+        
         let destinationUrl = sourceDir.appendingPathComponent(originUrl.lastPathComponent)
         if !fileManager.contentsEqual(atPath: destinationUrl.path, andPath: originUrl.path) {
             let data = try Data(contentsOf: originUrl)
@@ -61,9 +62,7 @@ class TransferHelper {
     
     
     public func transferFile(from originUrl: URL) throws -> Data {
-        
         let destinationUrl = documentDir.appendingPathComponent(originUrl.lastPathComponent)
-        
         do {
             try TransferHelper.default.storeOriginFile(from: originUrl)
         } catch {
