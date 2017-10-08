@@ -7,31 +7,69 @@
 
 import UIKit
 
+/// Due to the limitation of the sandbox mechanism in iOS, we can only read the plist
+/// file in the bundle. We can not WRITE to it.
+/// So we transfer the plist file from the bundle to the Document directory, then we can
+/// read and write it for free.
+/// And, a specific situation is taken into consideration: when the plist file in the
+/// bundle is updated. So we created a "source/" subdirectory in Document directory to
+/// record the last one plist file in the bundle. And when bundle file is updated, both
+/// the file in Document directory and "source/" subdirectory should be updated too.
+
+/// For the convenience of explanation, the following test cases are listed:
+/// 1. the plist file is created both in the Document directory and "source/" subdirectory
+/// for the very first time.
+/// 2. when user update the plist file in the Document directory(e.g. change the switch status), the change is persisted in
+/// the file.
+/// 3. when the plist file in the bundle is updated, it should trigger the update of
+/// "source/" and the file in the Document directory.
+
 class FileHelper {
     
     // MARK: - Singleton
     
-    static let `default` = FileHelper()
+    public static let `default` = FileHelper()
+    private let fileManager = FileManager.default
+    
+    private lazy var sourceDir: URL = {
+        let destinationDir = documentDir.appendingPathComponent("source/")
+        return destinationDir
+    }()
+    
+    public lazy var documentDir: URL = {
+        return try! fileManager.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false)
+    }()
     
     // MARK: - Functions that related to file transfer
     
-    /// Return the transferredUrl in Document directory against the given originUrl
-    func destinationUrl(from originUrl: URL) throws -> URL {
-        let fileManager = FileManager.default
-        let originLastComponent = originUrl.lastPathComponent
-        let documentDir = try fileManager.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false)
-        let destinationUrl = documentDir.appendingPathComponent(originLastComponent)
-        return destinationUrl
+    /// The plist file in the "source/" subdirectory always keep the same to the current
+    /// plist file in the bundle.
+    private func storeOriginFile(from originUrl: URL) throws {
+        if !fileManager.fileExists(atPath: sourceDir.path) {
+            try fileManager.createDirectory(atPath: sourceDir.path, withIntermediateDirectories: false, attributes: nil)
+        }
+       
+        let destinationUrl = sourceDir.appendingPathComponent(originUrl.lastPathComponent)
+        if !fileManager.contentsEqual(atPath: destinationUrl.path, andPath: originUrl.path) {
+            let data = try Data(contentsOf: originUrl)
+            try data.write(to: destinationUrl)
+            try data.write(to: documentDir.appendingPathComponent(originUrl.lastPathComponent))
+        }
+        
+        return
     }
     
-    /// Transfer the data of originUrl and write to destinationUrl, for the very first time. Otherwise
-    /// Return the data of destinationUrl.
-    func transferFileFrom(_ originUrl: URL) throws -> Data {
+    
+    public func transferFile(from originUrl: URL) throws -> Data {
         
-        let fileManager = FileManager.default
-        let destinationUrl = try FileHelper.default.destinationUrl(from: originUrl)
+        let destinationUrl = documentDir.appendingPathComponent(originUrl.lastPathComponent)
         
-        // If the file already exists in given path, return
+        do {
+            try FileHelper.default.storeOriginFile(from: originUrl)
+        } catch {
+            print(error.localizedDescription)
+        }
+        
         if fileManager.fileExists(atPath: destinationUrl.path) {
             let data = try Data(contentsOf: destinationUrl)
             return data
