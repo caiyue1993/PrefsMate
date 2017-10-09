@@ -14,8 +14,8 @@ PrefsMate provide an elegant way to generate UITableView using a property list f
 - [x] Muilty Sections
 - [x] Section Header / Footer 
 - [x] Demo Project
-- [] Localized Strings
-- [] More Custom Cells
+- [ ] Localized Strings
+- [ ] More Custom Cells
 
 ## Background
 
@@ -35,8 +35,6 @@ Taking example of the image above, the formatted plist file looks like this:
 
 ![plist structure](https://i.loli.net/2017/09/29/59cdb7a32ed93.png)
 
-> Don't be afraid of this long file. In fact you just need to do some clickable things. You could even copy and paste [our plist source code](https://github.com/caiyue1993/PrefsMate/blob/master/Example/PrefsMate/Prefs.plist) first just for your convenience.
-
 The meaning of each item property is as follows:
 
 | Property      | usage         | 
@@ -48,6 +46,8 @@ The meaning of each item property is as follows:
 | `switchStatus` | the status of the switch control |
 | `selectActionName` | the name of select action(optional) |
 | `switchActionName` | the name of switch action(optional)  | 
+
+> Don't be afraid of this long file. In fact you just need to do some clickable things. You could even copy and paste [our plist source code](https://github.com/caiyue1993/PrefsMate/blob/master/Example/PrefsMate/Prefs.plist) first just for your convenience.
 
 ## 2. Create the table view and do the parsing job
 ```swift
