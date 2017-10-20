@@ -12,7 +12,7 @@
 		607FACD81AFB9204008FA782 /* PrefsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* PrefsViewController.swift */; };
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
-		678E99161F7A36420008837C /* Prefs.plist in Resources */ = {isa = PBXBuildFile; fileRef = 678E990D1F7A329C0008837C /* Prefs.plist */; };
+		6775A06C1F99FB4600D05CC3 /* Prefs.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6775A06E1F99FB4600D05CC3 /* Prefs.plist */; };
 		E1E47DC80B3B940E83A6413F /* Pods_PrefsMate_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1B69BE5DD024DE996DD569F /* Pods_PrefsMate_Example.framework */; };
 /* End PBXBuildFile section */
 
@@ -37,7 +37,8 @@
 		607FACE51AFB9204008FA782 /* PrefsMate_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PrefsMate_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
-		678E990D1F7A329C0008837C /* Prefs.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Prefs.plist; sourceTree = "<group>"; };
+		6775A06D1F99FB4600D05CC3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Base; path = Base.lproj/Prefs.plist; sourceTree = "<group>"; };
+		6775A06F1F99FB5700D05CC3 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "zh-Hans"; path = "zh-Hans.lproj/Prefs.plist"; sourceTree = "<group>"; };
 		7599586AF533BC1B8FE7F1AF /* Pods-PrefsMate_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PrefsMate_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-PrefsMate_Example/Pods-PrefsMate_Example.release.xcconfig"; sourceTree = "<group>"; };
 		95F35D04A7209424C1FD5BD8 /* Pods-PrefsMate_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PrefsMate_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PrefsMate_Example/Pods-PrefsMate_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		A1B69BE5DD024DE996DD569F /* Pods_PrefsMate_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PrefsMate_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -93,7 +94,7 @@
 			children = (
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				607FACD71AFB9204008FA782 /* PrefsViewController.swift */,
-				678E990D1F7A329C0008837C /* Prefs.plist */,
+				6775A06E1F99FB4600D05CC3 /* Prefs.plist */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACD31AFB9204008FA782 /* Supporting Files */,
 			);
@@ -226,8 +227,8 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				en,
 				Base,
+				"zh-Hans",
 			);
 			mainGroup = 607FACC71AFB9204008FA782;
 			productRefGroup = 607FACD11AFB9204008FA782 /* Products */;
@@ -246,7 +247,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
-				678E99161F7A36420008837C /* Prefs.plist in Resources */,
+				6775A06C1F99FB4600D05CC3 /* Prefs.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -388,6 +389,18 @@
 			targetProxy = 607FACE61AFB9204008FA782 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		6775A06E1F99FB4600D05CC3 /* Prefs.plist */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6775A06D1F99FB4600D05CC3 /* Base */,
+				6775A06F1F99FB5700D05CC3 /* zh-Hans */,
+			);
+			name = Prefs.plist;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		607FACED1AFB9204008FA782 /* Debug */ = {
