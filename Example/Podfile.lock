@@ -1,5 +1,5 @@
 PODS:
-  - PrefsMate (0.1.0)
+  - PrefsMate (0.3.4)
 
 DEPENDENCIES:
   - PrefsMate (from `../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
-  PrefsMate: 126d369240a118c1c743b86f71e76ae0306f9cd2
+  PrefsMate: 1d0510249d2d772bd8ef6cc7e2556461f4f16f5d
 
 PODFILE CHECKSUM: 660ca1154d42b2ab5f352aab5bb790c899d5784b
 
