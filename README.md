@@ -21,7 +21,7 @@ PrefsMate provide an elegant way to generate UITableView using a property list f
 
 In our app, we usually need a UITableView in PrefsViewController(or perhaps named SettingsViewController, whatever). And the interface may just looks like this:
 
-![PrefsViewController](https://i.loli.net/2017/09/29/59cdab5adb4f4.png)
+![PrefsViewController](https://i.loli.net/2017/10/20/59e9c804d4aa2.png)
 
 When implementing this kind of stuff, your inner voice must be this: "Writing this UI is fxxking tedious! Is there any help that I can ask for?" 
 
@@ -33,7 +33,7 @@ And congrats! You have come to the right place :).
 
 Taking example of the image above, the formatted plist file looks like this:
 
-![plist structure](https://i.loli.net/2017/09/29/59cdb7a32ed93.png)
+![plist structure](https://i.loli.net/2017/10/20/59e9c894cab6c.png)
 
 The meaning of each item property is as follows:
 
