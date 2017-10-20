@@ -14,7 +14,7 @@ PrefsMate provide an elegant way to generate UITableView using a property list f
 - [x] Muilty Sections
 - [x] Section Header / Footer 
 - [x] Demo Project
-- [ ] Localized Strings
+- [x] World Ready
 - [ ] More Custom Cells
 
 ## Background
