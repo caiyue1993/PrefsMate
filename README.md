@@ -33,7 +33,7 @@ And congrats! You have come to the right place :).
 
 Taking example of the image above, the formatted plist file looks like this:
 
-![plist structure](https://i.loli.net/2017/10/20/59e9c894cab6c.png)
+![plist structure](https://i.loli.net/2017/10/20/59e9c921e41aa.png)
 
 The meaning of each item property is as follows:
 
