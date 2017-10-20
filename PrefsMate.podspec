@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'PrefsMate'
-  s.version          = '0.3.3'
+  s.version          = '0.3.4'
   s.summary          = '🐣 Elegant UITableView generator for Swift.'
   s.homepage         = 'https://github.com/caiyue1993/PrefsMate'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
