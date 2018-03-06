@@ -20,6 +20,8 @@ extension PrefsTableViewCell {
                 let `switch` = UISwitch()
                 `switch`.addTarget(self, action: #selector(switchAction(_:)), for: .valueChanged)
                 accessoryView = `switch`
+            } else {
+                accessoryView = nil
             }
         }
         get {
@@ -29,10 +31,8 @@ extension PrefsTableViewCell {
     
     var switchStatus: Bool {
         set {
-            if newValue {
-                if let av = (accessoryView as? UISwitch) {
-                    av.setOn(newValue, animated: false)
-                }
+            if let av = (accessoryView as? UISwitch) {
+                av.setOn(newValue, animated: false)
             }
         }
         get {
