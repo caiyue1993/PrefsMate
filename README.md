@@ -6,7 +6,7 @@
 [![License](https://img.shields.io/cocoapods/l/PrefsMate.svg?style=flat)](http://cocoapods.org/pods/PrefsMate)
 [![Platform](https://img.shields.io/cocoapods/p/PrefsMate.svg?style=flat)](http://cocoapods.org/pods/PrefsMate)
 
-PrefsMate provide an elegant way to generate UITableView using a property list file(plist file, in short). Also, you can configure actions with its support. Thanks to the **Codable** protocol in Swift 4, it makes the code perfect clean.
+PrefsMate provide an elegant way to generate UITableView using a property list file(plist file, in short). Also, you can configure actions with its support. Thanks to the **Codable** protocol, it makes the code perfect clean.
 
 ## Features
 - [x] Data Persistence
@@ -123,13 +123,24 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 ## Requirements
 
-- Swift 4
+- Swift 5
 - iOS 9 or later
 
 ## Installation
 
-PrefsMate is available through [CocoaPods](http://cocoapods.org). To install
-it, simply add the following line to your Podfile:
+PrefsMate is available through Swift Package Manager & [CocoaPods](http://cocoapods.org). 
+
+### Swift Package Manager
+From Xcode 11, you can use Swift Package Manager to add Kingfisher to your project.
+
+1. Select File > Swift Packages > Add Package Dependency. Enter https://github.com/caiyue1993/PrefsMate.git in the "Choose Package Repository" dialog.
+2. In the next page, specify the version resolving rule as "Up to Next Major" with latest release version
+3. After Xcode checking out the source and resolving the version, you can choose the "PrefsMate" library and add it to your app target.
+
+If you encounter any problem or have a question on adding package to an Xcode project, I suggest the [Adding Package Dependencies to Your App guide](https://developer.apple.com/documentation/xcode/adding_package_dependencies_to_your_app) article from Apple.
+
+### CocoaPods
+To install it, simply add the following line to your Podfile:
 
 ```ruby
 pod 'PrefsMate'
