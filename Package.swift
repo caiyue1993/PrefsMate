@@ -3,6 +3,9 @@ import PackageDescription
 
 let package = Package(
     name: "PrefsMate",
+    platforms: [
+        .iOS(.v9)
+    ],
     products: [
         .library(name: "PrefsMate", targets: ["PrefsMate"])
     ],

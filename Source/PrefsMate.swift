@@ -22,7 +22,7 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
 
-import Foundation
+import UIKit
 
 public typealias PrefsTableView = UITableView
 
@@ -46,7 +46,7 @@ open class PrefsMate: NSObject {
     /// Returns a default PrefsMate. A global constant `Mate` is a shortcut of `PrefsMate.default`.
     ///
     /// - seealso: `Mate`
-    open static let `default` = PrefsMate()
+    public static let `default` = PrefsMate()
     
     
     // MARK: - Functions that exposed to outside world
