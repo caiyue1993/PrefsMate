@@ -3,15 +3,15 @@
 # * https://github.com/supermarin/xcpretty#usage
 
 language: swift
-osx_image: xcode9
+osx_image: xcode10.2
 sudo: required
 env:
   global:
     - WORKSPACE=Example/PrefsMate.xcworkspace
     - SCHEME=PrefsMate-Example
-    - SDK=iphonesimulator11.0
+    - SDK=iphonesimulator12.2
   matrix:
-    - DESTINATION="platform=iOS Simulator,name=iPhone 8,OS=11.0"
+    - DESTINATION="platform=iOS Simulator,name=iPhone SE,OS=12.2"
 podfile: Example/Podfile
 before_script:
   - swift --version 
