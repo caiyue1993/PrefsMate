@@ -1,6 +1,7 @@
 # PrefsMate
 
 [![CI Status](http://img.shields.io/travis/caiyue1993/PrefsMate.svg?style=flat)](https://travis-ci.org/caiyue1993/PrefsMate)
+<a href="https://swift.org/package-manager/"><img src="https://img.shields.io/badge/SPM-supported-DE5C43.svg?style=flat"></a>
 [![Version](https://img.shields.io/cocoapods/v/PrefsMate.svg?style=flat)](http://cocoapods.org/pods/PrefsMate)
 [![License](https://img.shields.io/cocoapods/l/PrefsMate.svg?style=flat)](http://cocoapods.org/pods/PrefsMate)
 [![Platform](https://img.shields.io/cocoapods/p/PrefsMate.svg?style=flat)](http://cocoapods.org/pods/PrefsMate)
